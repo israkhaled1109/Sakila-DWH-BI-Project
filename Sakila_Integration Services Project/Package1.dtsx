@@ -1,0 +1,649 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/21/2024 6:14:20 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="EQ-EQ6298146"
+  DTS:CreatorName="AD\LGQZ7846"
+  DTS:DTSID="{2A903BD1-B5B0-43A6-8287-65C4C213188B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{4DA89A47-AFDC-4E27-9D96-AF251DB4BDE8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[EQ-EQ6298146\MSSQLSERVER02.sakila]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D5AAF47E-5D0F-4D60-BCF6-A755714FC5F6}"
+      DTS:ObjectName="EQ-EQ6298146\MSSQLSERVER02.sakila">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=EQ-EQ6298146\MSSQLSERVER02;Initial Catalog=sakila;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{D5AAF47E-5D0F-4D60-BCF6-A755714FC5F6}EQ-EQ6298146\MSSQLSERVER02.sakila;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[EQ-EQ6298146\MSSQLSERVER02.sakila_DWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{39BB17D2-97C9-4445-B77F-265F68EAC104}"
+      DTS:ObjectName="EQ-EQ6298146\MSSQLSERVER02.sakila_DWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=EQ-EQ6298146\MSSQLSERVER02;Initial Catalog=sakila_DWH;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{39BB17D2-97C9-4445-B77F-265F68EAC104}EQ-EQ6298146\MSSQLSERVER02.sakila_DWH;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\FactRental"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{edde0778-a7f2-4a69-b2ae-33fda271e961}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FactRental"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\FactRental\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactRental]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FactRental\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[EQ-EQ6298146\MSSQLSERVER02.sakila_DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[EQ-EQ6298146\MSSQLSERVER02.sakila_DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rental_id]"
+                      cachedDataType="i4"
+                      cachedName="rental_id"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rental_id]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[rental_id]" />
+                    <inputColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rental_date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="rental_date"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rental_date]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[rental_date]" />
+                    <inputColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[return_date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="return_date"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[return_date]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[return_date]" />
+                    <inputColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[inventory_id]"
+                      cachedDataType="i4"
+                      cachedName="inventory_id"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[inventory_id]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[inventory_id]" />
+                    <inputColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customer_id]"
+                      cachedDataType="i4"
+                      cachedName="customer_id"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]" />
+                    <inputColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[staff_id]"
+                      cachedDataType="ui1"
+                      cachedName="staff_id"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[staff_id]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[staff_id]" />
+                    <inputColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[amount]"
+                      cachedDataType="numeric"
+                      cachedName="amount"
+                      cachedPrecision="5"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[amount]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]" />
+                    <inputColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[payment_date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="payment_date"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[payment_date]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[payment_date]" />
+                    <inputColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[film_id]"
+                      cachedDataType="i4"
+                      cachedName="film_id"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[film_id]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[film_id]" />
+                    <inputColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[store_id]"
+                      cachedDataType="i4"
+                      cachedName="store_id"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[store_id]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[store_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rental_id]"
+                      dataType="i4"
+                      name="rental_id" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rental_date]"
+                      dataType="dbTimeStamp"
+                      name="rental_date" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[return_date]"
+                      dataType="dbTimeStamp"
+                      name="return_date" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[payment_date]"
+                      dataType="dbTimeStamp"
+                      name="payment_date" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      dataType="i4"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[staff_id]"
+                      dataType="ui1"
+                      name="staff_id" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[inventory_id]"
+                      dataType="i4"
+                      name="inventory_id" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[film_id]"
+                      dataType="i4"
+                      name="film_id" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[store_id]"
+                      dataType="i4"
+                      name="store_id" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[amount]"
+                      dataType="numeric"
+                      name="amount"
+                      precision="5"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FactRental\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FactRental\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FactRental\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FactRental\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+    rental.rental_id, 
+    rental.rental_date, 
+    rental.return_date, 
+    inventory.inventory_id,
+    customer.customer_id, 
+    staff.staff_id, 
+    payment.amount, 
+    payment.payment_date, 
+    film.film_id,
+    store.store_id
+FROM 
+    rental 
+LEFT JOIN inventory ON rental.inventory_id = inventory.inventory_id
+LEFT JOIN film ON inventory.film_id = film.film_id
+LEFT JOIN payment ON rental.rental_id = payment.rental_id
+ LEFT JOIN customer ON rental.customer_id = customer.customer_id
+LEFT JOIN staff ON rental.staff_id = staff.staff_id
+ LEFT JOIN store ON inventory.store_id = store.store_id</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FactRental\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[EQ-EQ6298146\MSSQLSERVER02.sakila]"
+                  connectionManagerRefId="Package.ConnectionManagers[EQ-EQ6298146\MSSQLSERVER02.sakila]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[rental_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rental_id]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[rental_id]"
+                      name="rental_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[rental_date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rental_date]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[rental_date]"
+                      name="rental_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[return_date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[return_date]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[return_date]"
+                      name="return_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[inventory_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[inventory_id]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[inventory_id]"
+                      name="inventory_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]"
+                      name="customer_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[staff_id]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[staff_id]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[staff_id]"
+                      name="staff_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[amount]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]"
+                      name="amount"
+                      precision="5"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[payment_date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[payment_date]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[payment_date]"
+                      name="payment_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[film_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[film_id]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[film_id]"
+                      name="film_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[store_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[store_id]"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].Columns[store_id]"
+                      name="store_id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rental_id]"
+                      dataType="i4"
+                      name="rental_id" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rental_date]"
+                      dataType="dbTimeStamp"
+                      name="rental_date" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[return_date]"
+                      dataType="dbTimeStamp"
+                      name="return_date" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[inventory_id]"
+                      dataType="i4"
+                      name="inventory_id" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
+                      dataType="i4"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[staff_id]"
+                      dataType="ui1"
+                      name="staff_id" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[amount]"
+                      dataType="numeric"
+                      name="amount"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[payment_date]"
+                      dataType="dbTimeStamp"
+                      name="payment_date" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[film_id]"
+                      dataType="i4"
+                      name="film_id" />
+                    <externalMetadataColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[store_id]"
+                      dataType="i4"
+                      name="store_id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rental_id]"
+                      dataType="i4"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rental_id]"
+                      name="rental_id" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rental_date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rental_date]"
+                      name="rental_date" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[return_date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[return_date]"
+                      name="return_date" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[inventory_id]"
+                      dataType="i4"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[inventory_id]"
+                      name="inventory_id" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_id]"
+                      dataType="i4"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_id]"
+                      name="customer_id" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[staff_id]"
+                      dataType="ui1"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[staff_id]"
+                      name="staff_id" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[amount]"
+                      dataType="numeric"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[amount]"
+                      name="amount"
+                      precision="5"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[payment_date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[payment_date]"
+                      name="payment_date" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[film_id]"
+                      dataType="i4"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[film_id]"
+                      name="film_id" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[store_id]"
+                      dataType="i4"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[store_id]"
+                      name="store_id" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\FactRental.Paths[OLE DB Source Output]"
+              endId="Package\FactRental\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\FactRental\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="129.333333333334,42.6666666666667"
+          Id="Package\FactRental"
+          TopLeft="177.499992065132,110.49999473095" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\FactRental">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.666666666667,42.6666666666667"
+          Id="Package\FactRental\OLE DB Source"
+          TopLeft="252.874995863065,51.9999984502793" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\FactRental\OLE DB Destination"
+          TopLeft="303.874994343147,138.999995857477" />
+        <EdgeLayout
+          Id="Package\FactRental.Paths[OLE DB Source Output]"
+          TopLeft="328.208329196399,94.6666651169459">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="61.6666651467483,44.3333307405314"
+              Start="0,0"
+              End="61.6666651467483,36.8333307405314">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.1666653702657" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.1666653702657"
+                    Point2="0,22.1666653702657"
+                    Point3="4,22.1666653702657" />
+                  <mssgle:LineSegment
+                    End="57.6666651467483,22.1666653702657" />
+                  <mssgle:CubicBezierSegment
+                    Point1="57.6666651467483,22.1666653702657"
+                    Point2="61.6666651467483,22.1666653702657"
+                    Point3="61.6666651467483,26.1666653702657" />
+                  <mssgle:LineSegment
+                    End="61.6666651467483,36.8333307405314" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactRental\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
