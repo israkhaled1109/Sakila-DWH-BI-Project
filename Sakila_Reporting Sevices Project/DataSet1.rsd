@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>shared data</DataSourceReference>
+      <CommandText>SELECT* FROM DimFilm
+SELECT* FROM FactRental
+SELECT* FROM DimCustomer
+SELECT* FROM DimDate
+SELECT* FROM FilmActor</CommandText>
+    </Query>
+  </DataSet>
+</SharedDataSet>

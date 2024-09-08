@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Multidimensional_ITI_PROJECT", "Multidimensional_ITI_PROJECT.dwproj", "{C8D6B127-90B3-4BBC-9DF4-C4847D3320D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8D6B127-90B3-4BBC-9DF4-C4847D3320D1}.Development|Default.ActiveCfg = Development
+		{C8D6B127-90B3-4BBC-9DF4-C4847D3320D1}.Development|Default.Build.0 = Development
+		{C8D6B127-90B3-4BBC-9DF4-C4847D3320D1}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C49F9D5C-190F-4BAC-8DD6-4309469894E9}
+	EndGlobalSection
+EndGlobal

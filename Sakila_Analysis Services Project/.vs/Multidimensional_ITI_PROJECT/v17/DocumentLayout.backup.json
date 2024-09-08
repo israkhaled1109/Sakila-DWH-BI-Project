@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Marina Ashraf\\source\\repos\\Multidimensional_ITI_PROJECT\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C8D6B127-90B3-4BBC-9DF4-C4847D3320D1}|Multidimensional_ITI_PROJECT.dwproj|C:\\Users\\Marina Ashraf\\source\\repos\\Multidimensional_ITI_PROJECT\\Sakila DWH _analy.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{C8D6B127-90B3-4BBC-9DF4-C4847D3320D1}|Multidimensional_ITI_PROJECT.dwproj|solutionrelative:Sakila DWH _analy.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8D6B127-90B3-4BBC-9DF4-C4847D3320D1}|Multidimensional_ITI_PROJECT.dwproj|C:\\Users\\Marina Ashraf\\source\\repos\\Multidimensional_ITI_PROJECT\\Sakila DWH Project.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{C8D6B127-90B3-4BBC-9DF4-C4847D3320D1}|Multidimensional_ITI_PROJECT.dwproj|solutionrelative:Sakila DWH Project.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8D6B127-90B3-4BBC-9DF4-C4847D3320D1}|Multidimensional_ITI_PROJECT.dwproj|C:\\Users\\Marina Ashraf\\source\\repos\\Multidimensional_ITI_PROJECT\\Dim Film 3.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{C8D6B127-90B3-4BBC-9DF4-C4847D3320D1}|Multidimensional_ITI_PROJECT.dwproj|solutionrelative:Dim Film 3.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 19,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Sakila DWH Project.cube [Design]",
+              "DocumentMoniker": "C:\\Users\\Marina Ashraf\\source\\repos\\Multidimensional_ITI_PROJECT\\Sakila DWH Project.cube",
+              "RelativeDocumentMoniker": "Sakila DWH Project.cube",
+              "ToolTip": "C:\\Users\\Marina Ashraf\\source\\repos\\Multidimensional_ITI_PROJECT\\Sakila DWH Project.cube [Design]",
+              "RelativeToolTip": "Sakila DWH Project.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-26T18:42:10.868Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Sakila DWH _analy.cube [Design]",
+              "DocumentMoniker": "C:\\Users\\Marina Ashraf\\source\\repos\\Multidimensional_ITI_PROJECT\\Sakila DWH _analy.cube",
+              "RelativeDocumentMoniker": "Sakila DWH _analy.cube",
+              "ToolTip": "C:\\Users\\Marina Ashraf\\source\\repos\\Multidimensional_ITI_PROJECT\\Sakila DWH _analy.cube [Design]",
+              "RelativeToolTip": "Sakila DWH _analy.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-26T16:43:36.133Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dim Film 3.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\Marina Ashraf\\source\\repos\\Multidimensional_ITI_PROJECT\\Dim Film 3.dim",
+              "RelativeDocumentMoniker": "Dim Film 3.dim",
+              "ToolTip": "C:\\Users\\Marina Ashraf\\source\\repos\\Multidimensional_ITI_PROJECT\\Dim Film 3.dim [Design]",
+              "RelativeToolTip": "Dim Film 3.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-26T18:55:57.595Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

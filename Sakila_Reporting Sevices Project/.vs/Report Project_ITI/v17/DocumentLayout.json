@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Marina Ashraf\\source\\repos\\Report Project_ITI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CAFB8BAE-039B-4768-912F-7D8EB2A39AE7}|Report Project_ITI.rptproj|C:\\Users\\Marina Ashraf\\source\\repos\\Report Project_ITI\\customers.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{CAFB8BAE-039B-4768-912F-7D8EB2A39AE7}|Report Project_ITI.rptproj|solutionrelative:customers.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAFB8BAE-039B-4768-912F-7D8EB2A39AE7}|Report Project_ITI.rptproj|C:\\Users\\Marina Ashraf\\source\\repos\\Report Project_ITI\\Film .rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{CAFB8BAE-039B-4768-912F-7D8EB2A39AE7}|Report Project_ITI.rptproj|solutionrelative:Film .rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 22,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cab27b98-a314-48d2-9746-efe8ba39ccb0}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 98,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "customers.rdl [Design]",
+              "DocumentMoniker": "C:\\Users\\Marina Ashraf\\source\\repos\\Report Project_ITI\\customers.rdl",
+              "RelativeDocumentMoniker": "customers.rdl",
+              "ToolTip": "C:\\Users\\Marina Ashraf\\source\\repos\\Report Project_ITI\\customers.rdl [Design]",
+              "RelativeToolTip": "customers.rdl [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-23T11:53:58.937Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Film .rdl [Design]",
+              "DocumentMoniker": "C:\\Users\\Marina Ashraf\\source\\repos\\Report Project_ITI\\Film .rdl",
+              "RelativeDocumentMoniker": "Film .rdl",
+              "ToolTip": "C:\\Users\\Marina Ashraf\\source\\repos\\Report Project_ITI\\Film .rdl [Design]",
+              "RelativeToolTip": "Film .rdl [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-23T11:34:49.495Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Multidimensional_ITI_PROJECT</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>bXsDsLLUmNfOzzLs0ZX/epRnQBU=8/22/2024 5:06:07 PM8/22/2024 5:06:07 PM</TimeStamp>
+        <ID>
+          <String>Sakila DWH_project</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>fhoExX3PaIWZy6hufsyr7PrzoRU=8/26/2024 5:00:30 PM8/26/2024 5:00:30 PM</TimeStamp>
+        <ID>
+          <String>Sakila DWH</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>v59eg3qWyzPQ/ZifaFFzWmeLK8Q=8/26/2024 5:02:07 PM8/26/2024 5:02:07 PM</TimeStamp>
+        <ID>
+          <String>Sakila DWH 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>aK54kcSd7shhQL4JNcmQ1bHD13c=8/22/2024 6:40:28 PM8/22/2024 5:08:26 PM</TimeStamp>
+        <ID>
+          <String>Sakila DWH Project</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>pcFDWlIUWr9Lo5SMhf6/1Iw9yeA=8/22/2024 7:23:27 PM8/22/2024 7:23:27 PM</TimeStamp>
+        <ID>
+          <String>Sakila DWH</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>A1/svDN/Vzf5PrItkNYvs7pF/jM=8/26/2024 5:22:44 PM8/26/2024 5:22:44 PM</TimeStamp>
+        <ID>
+          <String>Sakila DWH _analy</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>l6X8ytJbLrdc/ZE7WEtvbQCs0aw=8/22/2024 5:41:11 PM8/22/2024 5:10:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Customer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>8JBFegGfXhg1ljjWf0ezQ7B+b7w=8/22/2024 5:40:37 PM8/22/2024 5:10:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>kdPpiCUQuLWkOXvfypGobCsFY9k=8/22/2024 5:41:35 PM8/22/2024 5:10:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Store</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>rMEz4J8vl+MmgiRD4SowLoti11Q=8/22/2024 5:55:28 PM8/22/2024 5:10:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Film</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>dNSC+lKNvM/+nxukuDiAJWCq5m8=8/22/2024 5:43:52 PM8/22/2024 5:10:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Staff</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>LgfJ99r9E4KCKpl/9hFwl5uU0k4=8/22/2024 5:44:54 PM8/22/2024 5:10:46 PM</TimeStamp>
+        <ID>
+          <String>Film Actor</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>cCfr1IfD8+O1psk3CaLx3JWyGWw=8/22/2024 7:23:54 PM8/22/2024 7:23:54 PM</TimeStamp>
+        <ID>
+          <String>Dim Film 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>fV27fhIuuVN8mXnDpiuOdlbJis0=8/22/2024 7:23:54 PM8/22/2024 7:23:54 PM</TimeStamp>
+        <ID>
+          <String>Dim Customer 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>aVLQFJh9foSH8WQakwJf7qQywlw=8/22/2024 7:36:08 PM8/22/2024 7:26:30 PM</TimeStamp>
+        <ID>
+          <String>Dim Customer 2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Z+eHGGzOFwcmEJrXhNz1KEntQOo=8/22/2024 7:36:52 PM8/22/2024 7:26:30 PM</TimeStamp>
+        <ID>
+          <String>Dim Film 2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>1q7YeiVTR2BQ4RyiDRyGMHE0loc=8/26/2024 5:43:32 PM8/26/2024 5:24:17 PM</TimeStamp>
+        <ID>
+          <String>Dim Film 3</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>IPH7J7yv5RKm/UzZEdJ+GUgKdYA=8/26/2024 5:57:56 PM8/26/2024 5:24:17 PM</TimeStamp>
+        <ID>
+          <String>Dim Store 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Hw2LY0lOZnkGXXMCbcuenqtI03g=8/26/2024 5:58:59 PM8/26/2024 5:24:17 PM</TimeStamp>
+        <ID>
+          <String>Dim Customer 3</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>YRw1Uwm6ZtCPk7rKEBRWdRWJvSQ=8/26/2024 7:43:35 PM8/26/2024 7:43:35 PM</TimeStamp>
+        <ID>
+          <String>Dim Film 4</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>DWV0DjCXtftp8GcX5Q2z3k96/cY=8/26/2024 7:43:36 PM8/26/2024 7:43:35 PM</TimeStamp>
+        <ID>
+          <String>Dim Customer 4</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>behLIK545X3tIzptXDmjnvu4YDE=8/26/2024 7:43:36 PM8/26/2024 7:43:35 PM</TimeStamp>
+        <ID>
+          <String>Dim Store 2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>NZTwzuLiR+cW4TcUw3L0dnOcKHQ=8/23/2024 3:11:46 PM8/22/2024 5:10:46 PMk/YyfTDV8TfuEydJjvhBRMk50dc=8/22/2024 5:10:46 PM8/22/2024 5:10:46 PM</TimeStamp>
+        <ID>
+          <String>Sakila DWH Project</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>bXcFqj3zFm8mwwCzqzpRsUjFsc8=8/26/2024 9:43:53 PM8/22/2024 7:26:29 PMYYETVwcQsPs8NM9RBhuQNApYIq8=8/22/2024 7:26:30 PM8/22/2024 7:26:30 PM</TimeStamp>
+        <ID>
+          <String>Sakila DWH</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>fYCcfkioeWXQqPDOGy6gFnc+xHk=8/26/2024 9:41:30 PM8/26/2024 7:43:35 PM+Bk2FUzzrqp/Ue+SWMJHyjEhz0U=8/26/2024 7:43:35 PM8/26/2024 7:43:35 PM</TimeStamp>
+        <ID>
+          <String>Sakila DWH _analy</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>apxCCApJQpNxt90FHxSNFxl9gjU=8/22/2024 4:53:55 PM8/22/2024 4:53:54 PM</TimeStamp>
+      <ID>
+        <String>Multidimensional_ITI_PROJECT</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2024-08-29T14:05:44.736667Z</LastDeployed>
+</DeploymentSnapshot>
