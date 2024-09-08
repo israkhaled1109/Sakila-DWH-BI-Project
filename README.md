@@ -2,6 +2,11 @@
  This project involves enhancing the Sakila Database, a fictional DVD rental store system. Key tasks included data enrichment, cleansing, and structuring, followed by data modeling and ending with data analysis and visualization.
 
 # 1. Overview
+This project demonstrates the end-to-end process of building a data warehouse for the Sakila DVD rental database, enriched with additional data for comprehensive year-round analysis. The project includes data modeling, ETL using SSIS, and advanced analytics through SSAS, Power BI, and Tableau. Key features include:
+1. Data warehouse design with a snowflake schema.
+2. ETL implementation using SSIS to populate the DWH.
+3. Comprehensive data analysis and visualization with SSAS, SSRS, Power BI, Tableau and Excel.
+4. Advanced insights on rental performance, customer behavior, film categories, and store operations.
 
 # 2. Prject Satges
 1. Data Source
